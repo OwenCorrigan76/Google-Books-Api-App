@@ -12,7 +12,7 @@ const SearchResults = ({
     setVisible((preValue) => preValue + 5);
   };
 
-  const checkFavs = (id) => {
+  const checkFavourites = (id) => {
     const boolean = favourites.some((book) => book.id === id);
     return boolean;
   };
@@ -36,7 +36,7 @@ const SearchResults = ({
               </a>
 
               <div className="favourite">
-                {checkFavs(book.id) ? (
+                {checkFavourites(book.id) ? (
                   <button onClick={() => removeFromFavourites(book.id)}>
                     Remove From Favourites
                   </button>

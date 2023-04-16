@@ -22,7 +22,7 @@ function Search(props) {
     event.preventDefault();
     axios
       .get(
-        `https://www.googleapis.com/books/v1/volumes?q=${book}&key=${process.env.REACT_APP_API_KEY}&maxResults=30`
+        `https://www.googleapis.com/books/v1/volumes?q=${book}&key=AIzaSyAy9LvRLBy_u1s3QVjPUTDWyo0Meq1eFMY&maxResults=40`
       )
       .then((response) => {
         console.log(response.data.items);

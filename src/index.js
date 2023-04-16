@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-  <Navbar />
+    <Navbar />
     <React.StrictMode>
       <BookContextProvider>
         <Routes>
@@ -23,8 +23,8 @@ root.render(
         <App />
         <Search />
         <div className="footer">
-        <Footer year={new Date().getFullYear()} />
-      </div>
+          <Footer year={new Date().getFullYear()} />
+        </div>
       </BookContextProvider>
     </React.StrictMode>
   </BrowserRouter>
