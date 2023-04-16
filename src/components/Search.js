@@ -10,8 +10,8 @@ function Search(props) {
   const [book, setBook] = useState("");
   const [result, setResult] = useState([]);
 
-  const { favourites, addToFavourites, removeFromFavourites } = useBookContext();
-
+  const { favourites, addToFavourites, removeFromFavourites } =
+    useBookContext();
 
   function searchClicked(event) {
     const book = event.target.value;
@@ -22,7 +22,7 @@ function Search(props) {
     event.preventDefault();
     axios
       .get(
-        `https://www.googleapis.com/books/v1/volumes?q=${book}&key=AIzaSyAy9LvRLBy_u1s3QVjPUTDWyo0Meq1eFMY&maxResults=30`
+        `https://www.googleapis.com/books/v1/volumes?q=${book}&key=${process.env.REACT_APP_API_KEY}&maxResults=30`
       )
       .then((response) => {
         console.log(response.data.items);
@@ -36,8 +36,9 @@ function Search(props) {
   return (
     <>
       <Header name="Tramore" />
-       <div className=""> <div className="firstRow"></div>
-    
+      <div className="">
+        {" "}
+        <div className="firstRow"></div>
         <SearchResults
           result={result}
           favourites={favourites}
@@ -55,7 +56,7 @@ function Search(props) {
               onChange={searchClicked}
               className="form-control"
               placeholder="Search"
-             // autoComplete="off"
+              // autoComplete="off"
             />
             <button type="submit" className="btn btn-danger">
               Search
@@ -63,7 +64,6 @@ function Search(props) {
           </form>
         </div>
       </div>
-    
     </>
   );
 }
