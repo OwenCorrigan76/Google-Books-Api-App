@@ -1,5 +1,3 @@
-// used for add to / remove favourites
-
 import React, { useState, useContext } from "react";
 import { createContext } from "react";
 
@@ -21,7 +19,7 @@ const BookContextProvider = ({ children }) => {
     const oldFavourites = [...favourites];
     const newFavourites = oldFavourites.concat(book);
     setFavourites(newFavourites);
-    console.log("This is new ", newFavourites);
+    console.log("ADDING TO FAVOURITES...", newFavourites);
   };
 
   const removeFromFavourites = (id) => {

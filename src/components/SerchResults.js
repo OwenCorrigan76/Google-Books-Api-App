@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-const SearchResults = ({ result, favourites, addToFavourites, removeFromFavourites }) => {
+const SearchResults = ({
+  result,
+  favourites,
+  addToFavourites,
+  removeFromFavourites,
+}) => {
   const [visible, setVisible] = useState(5);
 
   const showMoreBooks = () => {
