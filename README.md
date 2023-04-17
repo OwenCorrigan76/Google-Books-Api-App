@@ -1,5 +1,7 @@
 # Simple Book Filtering App From Google Books 
 
+To use this example, download the files from GitHub or for the repo to your own account and use it from there.
+
 ![][i1]
 
 ## Available Scripts
